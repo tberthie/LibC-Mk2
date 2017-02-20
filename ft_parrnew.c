@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_malloc.c                                        :+:      :+:    :+:   */
+/*   ft_parrnew.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/14 21:33:40 by tberthie          #+#    #+#             */
-/*   Updated: 2017/02/14 21:34:53 by tberthie         ###   ########.fr       */
+/*   Created: 2017/02/20 19:49:20 by tberthie          #+#    #+#             */
+/*   Updated: 2017/02/20 19:49:22 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void			*ft_malloc(unsigned int size)
+void	**ft_parrnew(void)
 {
-	void		*ptr;
+	void	**arr;
 
-	if (!(ptr = malloc((size_t)size)))
-		exit(-1);
-	return (ptr);
+	arr = (void**)ft_m(sizeof(void*));
+	*arr = (void*)0;
+	return (arr);
 }

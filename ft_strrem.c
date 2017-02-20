@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   ft_strrem.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/14 21:24:54 by tberthie          #+#    #+#             */
-/*   Updated: 2017/02/14 21:25:39 by tberthie         ###   ########.fr       */
+/*   Created: 2017/02/20 19:51:21 by tberthie          #+#    #+#             */
+/*   Updated: 2017/02/20 19:51:22 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char			*ft_strnew(void)
+void	ft_strrem(char *str)
 {
-	char	*str;
-
-	str = ft_malloc(sizeof(char));
-	*str = 0;
-	return (str);
+	while (*str)
+	{
+		*str = str[1];
+		++str;
+	}
 }

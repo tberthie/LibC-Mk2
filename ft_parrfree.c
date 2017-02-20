@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_parrfree.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/14 21:41:19 by tberthie          #+#    #+#             */
-/*   Updated: 2017/02/14 22:05:56 by tberthie         ###   ########.fr       */
+/*   Created: 2017/02/20 19:49:06 by tberthie          #+#    #+#             */
+/*   Updated: 2017/02/20 19:49:07 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void			ft_strcpy(char *dst, char *str)
+#include <stdlib.h>
+
+void	ft_parrfree(void **array)
 {
-	while (*str)
-		*dst++ = *str++;
-	*dst = 0;
+	void	**beg;
+
+	beg = array;
+	while (*array)
+		free(*array++);
+	free(beg);
 }

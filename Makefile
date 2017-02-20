@@ -1,40 +1,28 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2017/02/14 20:57:15 by tberthie          #+#    #+#              #
-#    Updated: 2017/02/14 22:11:27 by tberthie         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
+OBJ=$(addprefix ft_,$(addsuffix .o,\
+	atoi atoip itoa abs\
+	freeret freeswap memalloc memcpy m ptrswap\
+	gnl rfc gdc\
+	isdir\
+	putchar putnchar putnbr putstr\
+	strchr strrchr strstr strcmp strncmp stricmp strcpy strdup strjoin strcjoin strsjoin\
+		strlen strrem strfrmchr\
+	strnew strpush strspush strins strsins strrem\
+	strarrdup strarrstr strarrstrn strarrrem strarrstrlen strarrstrstrr\
+	parrnew parrfree parrelmfree parrpush parrprem parrrem parrlen parrdup parrndup parrjoin))
+NAME=libft.a
 
-SRCS = malloc \
-putchar putstr putnbr \
-strlen strjoin strpush strcpy strnew
+all: $(NAME)
 
-OBJS = $(addprefix objs/ft_, $(addsuffix .o, $(SRCS)))
+$(NAME): $(OBJ)
+	ar rc $(NAME) $(OBJ)
 
-all: objs libft.a
-
-objs:
-	@mkdir objs
-
-libft.a: $(OBJS)
-	@echo "[libft.a]"
-	@ar rc libft.a $(OBJS)
-
-objs/%.o: srcs/%.c
-	@echo "[$<]"
-	@gcc -c $< -o $@ -I. -Weverything -O3
+%.o: %.c
+	gcc -c $< -o $@ -Weverything
 
 clean:
-	@echo "[rm objs]"
-	@rm -rf objs
+	rm -f $(OBJ)
 
 fclean: clean
-	@echo "[rm libft.a]"
-	@rm -rf libft.a
+	rm -f $(NAME)
 
-re: fclean all
+re: fclean $(NAME)

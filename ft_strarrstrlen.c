@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strarrstrlen.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/14 21:02:53 by tberthie          #+#    #+#             */
-/*   Updated: 2017/02/14 21:07:03 by tberthie         ###   ########.fr       */
+/*   Created: 2017/02/20 19:50:18 by tberthie          #+#    #+#             */
+/*   Updated: 2017/02/20 19:50:20 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_putstr(char *str)
+unsigned int	ft_strarrstrlen(char **array)
 {
-	write(1, str, ft_strlen(str));
+	unsigned int	len;
+
+	len = 0;
+	while (*array)
+	{
+		if (ft_strlen(*array) > len)
+			len = ft_strlen(*array);
+		++array;
+	}
+	return (len);
 }

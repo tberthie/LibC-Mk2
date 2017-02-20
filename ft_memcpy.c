@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strpush.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/14 21:31:18 by tberthie          #+#    #+#             */
-/*   Updated: 2017/02/14 21:40:44 by tberthie         ###   ########.fr       */
+/*   Created: 2017/02/20 19:48:50 by tberthie          #+#    #+#             */
+/*   Updated: 2017/02/20 19:48:52 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char			*ft_strpush(char *str, char c)
+void	ft_memcpy(void *dest, const void *src, unsigned int byte_nb)
 {
-	char	*new;
-	int		pos;
+	unsigned int	i;
 
-	pos = 0;
-	new = ft_malloc(sizeof(char) * (ft_strlen(str) + 2));
-	while (str[pos])
+	i = 0;
+	while (i != byte_nb)
 	{
-		new[pos] = str[pos];
-		pos++;
+		((char*)dest)[i] = ((const char*)src)[i];
+		++i;
 	}
-	free(str);
-	new[pos++] = c;
-	new[pos] = 0;
-	return (new);
 }
