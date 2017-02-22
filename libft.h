@@ -6,16 +6,19 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/20 19:51:42 by tberthie          #+#    #+#             */
-/*   Updated: 2017/02/20 19:52:05 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/02/22 15:30:52 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <stdarg.h>
+
 int				ft_atoi(const char *str);
 int				ft_atoip(char **str);
 char			*ft_itoa(int n);
+char			*ft_itoabase(int n, unsigned int b);
 unsigned int	ft_abs(int nb);
 
 unsigned char	ft_freeret(void *ptr, unsigned char ret);
@@ -44,11 +47,13 @@ unsigned char	ft_strncmp(const char *s1, const char *s2, unsigned int n);
 unsigned int	ft_stricmp(const char *s1, const char *s2);
 void			ft_strcpy(char *dest, const char *src);
 char			*ft_strdup(const char *str);
+char			*ft_strndup(const char *str, int size);
 char			*ft_strjoin(const char *s1, const char *s2);
 char			*ft_strcjoin(const char *s1, const char *s2, char c);
 char			*ft_strsjoin(const char *s1, const char *s2, const char *in);
 unsigned int	ft_strlen(const char *str);
 char			*ft_strfrmchr(char c, unsigned int n);
+char			**ft_strsplit(char *s, char c);
 
 char			*ft_strnew(void);
 void			ft_strpush(char **str, char c);
@@ -74,5 +79,9 @@ unsigned int	ft_parrlen(void **array);
 void			**ft_parrdup(void **array);
 void			**ft_parrndup(void **array, unsigned int n);
 void			**ft_parrjoin(void **a1, void **a2);
+
+int				ft_intlen(int nb);
+
+void			ft_printf(int fd, char *s, ...);
 
 #endif

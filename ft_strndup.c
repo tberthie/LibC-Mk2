@@ -1,30 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_gnl.c                                           :+:      :+:    :+:   */
+/*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/20 19:48:31 by tberthie          #+#    #+#             */
-/*   Updated: 2017/02/21 16:47:07 by tberthie         ###   ########.fr       */
+/*   Created: 2017/02/22 14:46:38 by tberthie          #+#    #+#             */
+/*   Updated: 2017/02/22 14:46:56 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-#include <stdlib.h>
-#include <unistd.h>
-
-char	*ft_gnl(int fd)
+char	*ft_strndup(const char *str, int size)
 {
-	char	*line;
-	char	c;
+	char	*dup;
 
-	line = ft_strnew();
-	while (read(fd, &c, 1) == 1 && c != '\n')
-		ft_strpush(&line, c);
-	if (c == '\n')
-		return (line);
-	free(line);
-	return ((char*)0);
+	dup = (char*)ft_m(sizeof(char) * (size + 1));
+	ft_strcpy(dup, str);
+	return (dup);
 }

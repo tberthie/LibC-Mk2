@@ -1,30 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_gnl.c                                           :+:      :+:    :+:   */
+/*   ft_itoabase.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/20 19:48:31 by tberthie          #+#    #+#             */
-/*   Updated: 2017/02/21 16:47:07 by tberthie         ###   ########.fr       */
+/*   Created: 2017/02/22 15:27:47 by tberthie          #+#    #+#             */
+/*   Updated: 2017/02/22 15:45:17 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 #include <stdlib.h>
-#include <unistd.h>
 
-char	*ft_gnl(int fd)
+char				*ft_itoabase(int n, unsigned int b)
 {
-	char	*line;
-	char	c;
+	char			*str;
+	unsigned int	nb;
+	unsigned int	t;
+	unsigned int	i;
 
-	line = ft_strnew();
-	while (read(fd, &c, 1) == 1 && c != '\n')
-		ft_strpush(&line, c);
-	if (c == '\n')
-		return (line);
-	free(line);
-	return ((char*)0);
+	nb = (unsigned int)((n < 0) ? -n : n);
+	i = 2 + (n < 0);
+	t = 1;
+	while (nb / t >= b)
+	{
+		++i;
+		t *= b;
+	}
+	str = (char*)ft_m(sizeof(char) * i);
+	if ((i = n < 0))
+		str[0] = '-';
+	while (t)
+	{
+		str[i++] = "0123456789abcdef"[nb / t % b];
+		t /= b;
+	}
+	str[i] = '\0';
+	return (str);
 }

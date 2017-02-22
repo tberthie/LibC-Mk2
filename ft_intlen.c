@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_gnl.c                                           :+:      :+:    :+:   */
+/*   ft_intlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/20 19:48:31 by tberthie          #+#    #+#             */
-/*   Updated: 2017/02/21 16:47:07 by tberthie         ###   ########.fr       */
+/*   Created: 2017/02/21 01:22:50 by tberthie          #+#    #+#             */
+/*   Updated: 2017/02/21 01:48:44 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-#include <stdlib.h>
-#include <unistd.h>
-
-char	*ft_gnl(int fd)
+int				ft_intlen(int nbr)
 {
-	char	*line;
-	char	c;
+	unsigned int	nb;
+	int				len;
 
-	line = ft_strnew();
-	while (read(fd, &c, 1) == 1 && c != '\n')
-		ft_strpush(&line, c);
-	if (c == '\n')
-		return (line);
-	free(line);
-	return ((char*)0);
+	nb = nbr < 0 ? (unsigned int)-nbr : (unsigned int)nbr;
+	len = (nbr < 0) + 1;
+	while (nb >= 10)
+	{
+		nb /= 10;
+		len++;
+	}
+	return (len);
 }

@@ -1,30 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_gnl.c                                           :+:      :+:    :+:   */
+/*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/20 19:48:31 by tberthie          #+#    #+#             */
-/*   Updated: 2017/02/21 16:47:07 by tberthie         ###   ########.fr       */
+/*   Created: 2016/11/03 22:25:38 by tberthie          #+#    #+#             */
+/*   Updated: 2017/02/21 15:16:34 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 #include <stdlib.h>
-#include <unistd.h>
 
-char	*ft_gnl(int fd)
+char		**ft_strsplit(char *s, char c)
 {
-	char	*line;
-	char	c;
+	char		**tab;
+	char		*word;
 
-	line = ft_strnew();
-	while (read(fd, &c, 1) == 1 && c != '\n')
-		ft_strpush(&line, c);
-	if (c == '\n')
-		return (line);
-	free(line);
-	return ((char*)0);
+	tab = (char**)ft_parrnew();
+	word = ft_strnew();
+	while (*s)
+	{
+		if (*s != c)
+			ft_strpush(&word, *s);
+		else if (*word)
+		{
+			ft_parrpush((void***)&tab, word);
+			word = ft_strnew();
+		}
+		s++;
+	}
+	if (*word)
+		ft_parrpush((void***)&tab, word);
+	else
+		free(word);
+	return (tab);
 }

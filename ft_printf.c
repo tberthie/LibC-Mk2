@@ -5,34 +5,41 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/20 19:49:34 by tberthie          #+#    #+#             */
-/*   Updated: 2017/02/20 19:49:36 by tberthie         ###   ########.fr       */
+/*   Created: 2017/02/22 15:04:54 by tberthie          #+#    #+#             */
+/*   Updated: 2017/02/22 15:44:58 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-#include <stdarg.h>
 #include <unistd.h>
+#include <stdlib.h>
 
-void	ft_printf(char *str, ...)
+void			ft_printf(int fd, char *str, ...)
 {
-	va_list		ap;
-	char		*percent;
+	va_list		lst;
+	char		*tmp;
 
-	va_start(ap, str);
-	while ((percent = ft_strchr(str, '%')))
-	{
-		if (percent != str)
-			write(1, str, (unsigned int)(percent - str));
-		if (*++percent == 's')
-			ft_putstr(va_arg(ap, const char*));
-		else if (*percent == 'i')
-			ft_putnbr(va_arg(ap, int));
-		else if (*percent == 'c')
-			ft_putchar((char)va_arg(ap, int));
-		str = percent + 1;
-	}
-	if (*str)
-		ft_putstr(str);
+	va_start(lst, str);
+	while (*str)
+		if (*str == '%' && *(str + 1) == 's' && (str += 2))
+		{
+			tmp = va_arg(lst, char*);
+			write(fd, tmp, ft_strlen(tmp));
+		}
+		else if (*str == '%' && *(str + 1) == 'd' && (str += 2))
+		{
+			tmp = ft_itoa(va_arg(lst, int));
+			write(fd, tmp, ft_strlen(tmp));
+			free(tmp);
+		}
+		else if (*str == '%' && *(str + 1) == 'p' && (str += 2))
+		{
+			write(fd, "0x7fff", 6);
+			tmp = ft_itoabase((int)va_arg(lst, void*), 16);
+			write(fd, tmp, ft_strlen(tmp));
+			free(tmp);
+		}
+		else
+			write(fd, str++, 1);
 }
