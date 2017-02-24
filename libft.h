@@ -13,8 +13,6 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdarg.h>
-
 int				ft_atoi(const char *str);
 int				ft_atoip(char **str);
 char			*ft_itoa(int n);
@@ -81,6 +79,8 @@ void			**ft_parrndup(void **array, unsigned int n);
 void			**ft_parrjoin(void **a1, void **a2);
 
 int				ft_intlen(int nb);
+
+# include <stdarg.h>
 
 void			ft_printf(int fd, char *s, ...);
 
