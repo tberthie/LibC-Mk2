@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoip.c                                         :+:      :+:    :+:   */
+/*   ft_strcount.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/20 19:48:06 by tberthie          #+#    #+#             */
-/*   Updated: 2017/03/09 18:54:11 by tberthie         ###   ########.fr       */
+/*   Created: 2017/03/24 11:44:49 by tberthie          #+#    #+#             */
+/*   Updated: 2017/03/24 11:46:49 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoip(char **str)
+unsigned int	ft_strcount(const char *s, char c)
 {
-	int		nb;
-	char	*s;
+	unsigned int	count;
 
-	nb = 0;
-	s = *str + (**str == '-');
-	while (*s > 47 && *s < 58)
-		nb = nb * 10 + *s++ - '0';
-	if (**str == '-')
-		nb *= -1;
-	*str = s;
-	return (nb);
+	count = 0;
+	while (*s)
+		if (*s++ == c)
+			count++;
+	return (count);
 }

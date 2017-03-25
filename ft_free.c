@@ -1,28 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoip.c                                         :+:      :+:    :+:   */
+/*   ft_free.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/20 19:48:06 by tberthie          #+#    #+#             */
-/*   Updated: 2017/03/09 18:54:11 by tberthie         ###   ########.fr       */
+/*   Created: 2017/03/25 15:59:09 by tberthie          #+#    #+#             */
+/*   Updated: 2017/03/25 20:39:58 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoip(char **str)
-{
-	int		nb;
-	char	*s;
+#include <stdlib.h>
 
-	nb = 0;
-	s = *str + (**str == '-');
-	while (*s > 47 && *s < 58)
-		nb = nb * 10 + *s++ - '0';
-	if (**str == '-')
-		nb *= -1;
-	*str = s;
-	return (nb);
+void			ft_free(void *ptr)
+{
+	if (ptr)
+		free(ptr);
 }
