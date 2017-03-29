@@ -6,7 +6,7 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/20 19:49:24 by tberthie          #+#    #+#             */
-/*   Updated: 2017/03/24 15:20:28 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/03/30 00:26:04 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,5 @@ void	ft_parrprem(void **tab, void *elem)
 		tab[0] = tab[1];
 		++tab;
 	}
+	tab[0] = 0;
 }
