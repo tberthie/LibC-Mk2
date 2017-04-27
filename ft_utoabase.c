@@ -1,23 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_utoabase.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/20 19:48:47 by tberthie          #+#    #+#             */
-/*   Updated: 2017/04/26 13:23:14 by tberthie         ###   ########.fr       */
+/*   Created: 2017/04/27 12:52:41 by tberthie          #+#    #+#             */
+/*   Updated: 2017/04/27 12:53:41 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memalloc(unsigned int size)
-{
-	char	*mem;
+#include <stdlib.h>
 
-	mem = (char*)ft_m(size);
-	while (size--)
-		mem[size] ^= mem[size];
-	return ((void*)mem);
+char				*ft_utoabase(unsigned int n, unsigned int b)
+{
+	char			*str;
+	unsigned int	t;
+	unsigned int	i;
+
+	i = 2;
+	t = 1;
+	while (n / t >= b)
+	{
+		++i;
+		t *= b;
+	}
+	str = (char*)ft_m(sizeof(char) * i);
+	i = 0;
+	while (t)
+	{
+		str[i++] = "0123456789abcdef"[n / t % b];
+		t /= b;
+	}
+	str[i] = '\0';
+	return (str);
 }

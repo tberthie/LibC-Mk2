@@ -6,7 +6,7 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/20 19:51:42 by tberthie          #+#    #+#             */
-/*   Updated: 2017/04/24 17:37:43 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/04/27 12:50:31 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int				ft_atoi(const char *str);
 int				ft_atoip(char **str);
 char			*ft_itoa(int n);
 char			*ft_itoabase(int n, unsigned int b);
+char			*ft_utoabase(unsigned int n, unsigned int b);
 unsigned int	ft_abs(int nb);
 
 unsigned char	ft_freeret(void *ptr, unsigned char ret);

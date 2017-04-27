@@ -1,5 +1,5 @@
 OBJ=$(addprefix ft_,$(addsuffix .o,\
-	atoi atoip itoa itoabase abs\
+	atoi atoip itoa itoabase utoabase abs\
 	freeret freeswap memalloc memcpy m ptrswap free\
 	gnl rfc gdc\
 	isdir\
@@ -20,7 +20,7 @@ $(NAME): $(OBJ)
 	ar rc $(NAME) $(OBJ)
 
 %.o: %.c
-	gcc -c $< -o $@ -Weverything
+	gcc -c $< -o $@ -Weverything -O3
 
 clean:
 	rm -f $(OBJ)
