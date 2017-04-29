@@ -1,6 +1,6 @@
 OBJ=$(addprefix ft_,$(addsuffix .o,\
 	atoi atoip itoa itoabase utoabase abs\
-	freeret freeswap memalloc memcpy m ptrswap free\
+	freeret freeswap memalloc memcpy m ptrswap free memset\
 	gnl rfc gdc\
 	isdir\
 	putchar putnchar putnbr putstr\
