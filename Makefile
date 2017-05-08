@@ -4,20 +4,23 @@ OBJ=$(addprefix ft_,$(addsuffix .o,\
 	gnl rfc gdc\
 	isdir\
 	putchar putnchar putnbr putstr\
-	strchr strrchr strstr strcmp strncmp stricmp strcpy strdup strjoin strcjoin strsjoin strsplit\
+	strchr strrchr strstr strcmp strncmp stricmp strcpy strdup strndup strjoin strcjoin strsjoin strsplit\
 		strlen strrem strfrmchr strcount\
 	strnew strpush strspush strins strsins strrem\
 	strarrdup strarrstr strarrstrn strarrrem strarrstrlen strarrstrstrr\
 	parrnew parrfree parrelmfree parrpush parrprem parrrem parrlen parrdup parrndup parrjoin\
 	intlen\
-	printf))
+	print))
+
+PRF=$(addprefix printf/ft_,$(addsuffix .o,\
+	printf con format cast utl wchar wutl color))
 
 NAME=libft.a
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	ar rc $(NAME) $(OBJ)
+$(NAME): $(OBJ) $(PRF)
+	ar rc $(NAME) $(OBJ) $(PRF)
 
 %.o: %.c
 	gcc -c $< -o $@ -Weverything -O3
