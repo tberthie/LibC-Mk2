@@ -6,14 +6,17 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/25 20:02:18 by tberthie          #+#    #+#             */
-/*   Updated: 2016/12/02 13:18:14 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/05/08 23:21:20 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PRINTF_H
 # define PRINTF_H
 
-# include "libft.h"
+# include "../libft.h"
+
+# include <stdlib.h>
+# include <unistd.h>
 
 int			ft_format(char *s, long long *f, va_list ap, int *c);
 

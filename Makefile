@@ -23,7 +23,7 @@ $(NAME): $(OBJ) $(PRF)
 	ar rc $(NAME) $(OBJ) $(PRF)
 
 %.o: %.c
-	gcc -c $< -o $@ -Weverything -O3
+	gcc -c $< -o $@ -Wall -Wextra -O3
 
 clean:
 	rm -f $(OBJ)

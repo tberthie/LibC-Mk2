@@ -6,7 +6,7 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/20 19:51:42 by tberthie          #+#    #+#             */
-/*   Updated: 2017/05/08 22:53:33 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/05/09 02:20:08 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,8 @@ void			ft_putstr(const char *str);
 char			*ft_strchr(char *str, char c);
 char			*ft_strrchr(char *str, char c);
 char			*ft_strstr(char *str, char *needle);
-unsigned char	ft_strcmp(const char *s1, const char *s2);
-unsigned char	ft_strncmp(const char *s1, const char *s2, unsigned int n);
+char			ft_strcmp(const char *s1, const char *s2);
+char			ft_strncmp(const char *s1, const char *s2, unsigned int n);
 unsigned int	ft_stricmp(const char *s1, const char *s2);
 void			ft_strcpy(char *dest, const char *src);
 char			*ft_strdup(const char *str);
