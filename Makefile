@@ -5,12 +5,13 @@ OBJ=$(addprefix ft_,$(addsuffix .o,\
 	isdir\
 	putchar putnchar putnbr putstr\
 	strchr strrchr strstr strcmp strncmp stricmp strcpy strdup strndup strjoin strcjoin strsjoin strsplit\
-		strlen strrem strfrmchr strcount\
+	strlen strrem strfrmchr strcount\
 	strnew strpush strspush strins strsins strrem\
 	strarrdup strarrstr strarrstrn strarrrem strarrstrlen strarrstrstrr\
 	parrnew parrfree parrelmfree parrpush parrprem parrrem parrlen parrdup parrndup parrjoin\
 	intlen\
-	print))
+	print\
+	))
 
 PRF=$(addprefix printf/ft_,$(addsuffix .o,\
 	printf con format cast utl wchar wutl color))
