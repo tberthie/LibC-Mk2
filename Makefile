@@ -28,6 +28,7 @@ $(NAME): $(OBJ) $(PRF)
 
 clean:
 	rm -f $(OBJ)
+	rm -f $(PRF)
 
 fclean: clean
 	rm -f $(NAME)

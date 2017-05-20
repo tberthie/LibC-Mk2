@@ -6,11 +6,13 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/20 19:49:24 by tberthie          #+#    #+#             */
-/*   Updated: 2017/05/09 22:42:14 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/05/20 13:20:39 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+#include <stdlib.h>
 
 void	ft_parrprem(void **tab, void *elem)
 {

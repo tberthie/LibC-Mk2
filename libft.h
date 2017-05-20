@@ -6,7 +6,7 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/20 19:51:42 by tberthie          #+#    #+#             */
-/*   Updated: 2017/05/09 02:20:08 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/05/20 13:14:29 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,6 @@ void			**ft_parrjoin(void **a1, void **a2);
 int				ft_intlen(int nb);
 
 void			ft_print(int fd, char *s, ...);
-int				ft_printf(char *s, ...);
+int				ft_printf(const char *s, ...);
 
 #endif

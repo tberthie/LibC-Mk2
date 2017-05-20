@@ -6,7 +6,7 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/08 22:44:23 by tberthie          #+#    #+#             */
-/*   Updated: 2017/05/16 00:07:35 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/05/20 13:13:47 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,4 +41,5 @@ void			ft_print(int fd, char *str, ...)
 		}
 		else
 			write(fd, str++, 1);
+	va_end(lst);
 }
