@@ -6,7 +6,7 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/25 20:02:18 by tberthie          #+#    #+#             */
-/*   Updated: 2017/05/08 23:21:20 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/05/20 13:54:38 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <wchar.h>
 
 int			ft_format(char *s, long long *f, va_list ap, int *c);
 
@@ -31,5 +32,10 @@ int			ft_con_ptr(va_list ap, long long f, int *c);
 
 char		*ft_itoabase_uns(unsigned long long n, int b, long long *f, char c);
 int			ft_color(char *s, int i, int *c);
+
+int			ft_charwlen(wchar_t c);
+int			ft_strwlen(wchar_t *s);
+void		ft_putwchar(wchar_t c);
+void		ft_putwstr(wchar_t *s);
 
 #endif

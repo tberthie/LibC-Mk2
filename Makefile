@@ -24,7 +24,7 @@ $(NAME): $(OBJ) $(PRF)
 	ar rc $(NAME) $(OBJ) $(PRF)
 
 %.o: %.c
-	gcc -c $< -o $@ -Wall -Wextra -O3
+	gcc -c $< -o $@ -Wall -Wextra -O3 -I . -I ./printf
 
 clean:
 	rm -f $(OBJ)
