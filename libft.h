@@ -6,12 +6,16 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/20 19:51:42 by tberthie          #+#    #+#             */
-/*   Updated: 2017/05/20 13:52:52 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/09/15 15:56:34 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
+# define RED "\x1b[31m"
+# define GREEN "\x1b[32m"
+# define EOC "\x1b[0m"
 
 # include <stdarg.h>
 

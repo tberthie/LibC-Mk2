@@ -21,7 +21,7 @@ NAME=libft.a
 all: $(NAME)
 
 $(NAME): $(OBJ) $(PRF)
-	ar rc $(NAME) $(OBJ) $(PRF)
+	ar rcs $(NAME) $(OBJ) $(PRF)
 
 %.o: %.c
 	gcc -c $< -o $@ -Wall -Wextra -Werror -O3 -I .
