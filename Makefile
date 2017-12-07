@@ -1,4 +1,4 @@
-OC = $(addprefix srcs/ft_,$(addsuffix .o,\
+OC = $(addprefix c/ft_,$(addsuffix .o,\
 	atoi atoip itoa itoabase utoabase abs\
 	freeret freeswap ptrswap free\
 	gnl rfc gdc\
@@ -29,7 +29,7 @@ all: $(NAME)
 $(NAME): $(OC) $(OA) $(PRF)
 	ar rcs $(NAME) $(OC) $(OA) $(PRF)
 
-srcs/%.o: srcs/%.c
+c/%.o: c/%.c
 	gcc -c $< -o $@ -Wall -Wextra -Werror -O3 -I.
 
 asm/%.o: asm/%.s
