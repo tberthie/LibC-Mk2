@@ -6,7 +6,7 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/20 19:51:42 by tberthie          #+#    #+#             */
-/*   Updated: 2017/09/15 15:56:34 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/12/07 20:46:00 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ unsigned char	ft_isdir(char *path);
 void			ft_putchar(char c);
 void			ft_putnchar(char c, unsigned int nb);
 void			ft_putnbr(int nb);
-void			ft_putstr(const char *str);
+void			ft_puts(const char *str);
 
 char			*ft_strchr(char *str, char c);
 char			*ft_strrchr(char *str, char c);

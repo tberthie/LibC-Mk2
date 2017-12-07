@@ -6,15 +6,14 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/25 20:02:18 by tberthie          #+#    #+#             */
-/*   Updated: 2017/05/22 17:05:01 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/12/07 20:43:51 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PRINTF_H
 # define PRINTF_H
 
-# include "libft.h"
-
+# include "../libft.h"
 # include <stdlib.h>
 # include <unistd.h>
 # include <wchar.h>
