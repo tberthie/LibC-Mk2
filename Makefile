@@ -1,10 +1,10 @@
 OC = $(addprefix srcs/ft_,$(addsuffix .o,\
 	atoi atoip itoa itoabase utoabase abs\
-	freeret freeswap m ptrswap free\
+	freeret freeswap ptrswap free\
 	gnl rfc gdc\
 	isdir\
 	putchar putnchar putnbr\
-	strrchr strstr strncmp stricmp strcpy strndup strjoin strcjoin strsjoin strsplit\
+	strrchr strstr strncmp stricmp strndup strjoin strcjoin strsjoin strsplit\
 	strrem strfrmchr strcount\
 	strnew strpush strspush strins strsins strrem\
 	strarrdup strarrstr strarrstrn strarrrem strarrstrlen strarrstrstrr\
@@ -14,7 +14,7 @@ OC = $(addprefix srcs/ft_,$(addsuffix .o,\
 	))
 
 OA = $(addprefix asm/ft_,$(addsuffix .o,\
-	bzero memalloc memset memcpy strdup memcmp \
+	bzero m memalloc memset memcpy memcmp \
 	strcat strlen strdup strcpy strcmp strchr puts\
 	cat\
 	))
