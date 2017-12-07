@@ -6,12 +6,14 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/20 19:51:42 by tberthie          #+#    #+#             */
-/*   Updated: 2017/12/07 20:46:00 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/12/08 00:39:50 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
+# define RFC_READ 64
 
 # define RED "\x1b[31m"
 # define GREEN "\x1b[32m"

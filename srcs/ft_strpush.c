@@ -6,12 +6,11 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/20 19:51:13 by tberthie          #+#    #+#             */
-/*   Updated: 2017/10/01 14:54:38 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/12/08 00:45:01 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "libft_internal.h"
 
 #include <stdlib.h>
 
@@ -20,9 +19,8 @@ void	ft_strpush(char **str, char c)
 	char			*n_str;
 	unsigned int	len;
 
-	n_str =
-		((len = ft_strlen(*str)) % ALLOC_STR_CHAR) ?
-		*str : (char*)ft_m(sizeof(char) * (len + ALLOC_STR_CHAR + 1));
+	len = ft_strlen(*str);
+	n_str = (char*)ft_m(len + 2);
 	n_str[len] = c;
 	n_str[len + 1] = '\0';
 	if (n_str == *str)

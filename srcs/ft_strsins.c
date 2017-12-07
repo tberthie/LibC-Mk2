@@ -6,12 +6,11 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/20 19:51:23 by tberthie          #+#    #+#             */
-/*   Updated: 2017/02/20 19:51:25 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/12/08 00:37:37 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "libft_internal.h"
 
 #include <stdlib.h>
 

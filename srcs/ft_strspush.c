@@ -6,12 +6,11 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/20 19:51:32 by tberthie          #+#    #+#             */
-/*   Updated: 2017/02/20 19:51:32 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/12/08 00:36:07 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "libft_internal.h"
 
 #include <stdlib.h>
 
@@ -23,9 +22,7 @@ void	ft_strspush(char **str, char *push)
 
 	strlen = ft_strlen(*str);
 	pushlen = ft_strlen(push);
-	n_str = (strlen / ALLOC_STR_CHAR == (strlen + pushlen) / ALLOC_STR_CHAR
-		&& strlen) ? *str : (char*)ft_m(sizeof(char) * (strlen + pushlen
-		+ ALLOC_STR_CHAR - (strlen + pushlen) % ALLOC_STR_CHAR + 1));
+	n_str = ft_m(strlen + pushlen + 1);
 	n_str[strlen + pushlen] = '\0';
 	while (pushlen--)
 		n_str[strlen + pushlen] = push[pushlen];
