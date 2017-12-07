@@ -35,6 +35,9 @@ srcs/%.o: srcs/%.c
 asm/%.o: asm/%.s
 	nasm $< -o $@ -f macho64 -I.
 
+printf/%.o: printf/%.c
+	gcc -c $< -o $@ -Wall -Wextra -Werror -O3 -I.
+
 clean:
 	rm -f $(OC)
 	rm -f $(OA)
