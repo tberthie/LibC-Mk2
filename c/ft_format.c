@@ -6,11 +6,11 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/26 13:50:56 by tberthie          #+#    #+#             */
-/*   Updated: 2017/05/22 16:30:41 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/12/08 01:00:52 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "libft.h"
 
 static int		ft_flags_len(char s, char *r, long long *f, int l)
 {

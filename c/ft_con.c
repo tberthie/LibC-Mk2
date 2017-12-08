@@ -6,11 +6,11 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/26 15:46:07 by tberthie          #+#    #+#             */
-/*   Updated: 2017/05/22 16:29:36 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/12/08 01:00:42 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "libft.h"
 #include <stdio.h>
 
 char		*ft_con_int(long long i, long long *f)

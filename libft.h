@@ -6,7 +6,7 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/20 19:51:42 by tberthie          #+#    #+#             */
-/*   Updated: 2017/12/08 00:39:50 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/12/08 01:00:08 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,9 @@
 # define EOC "\x1b[0m"
 
 # include <stdarg.h>
+# include <stdlib.h>
+# include <unistd.h>
+# include <wchar.h>
 
 int				ft_atoi(const char *str);
 int				ft_atoip(char **str);
@@ -93,6 +96,21 @@ void			**ft_parrjoin(void **a1, void **a2);
 int				ft_intlen(int nb);
 
 void			ft_print(int fd, char *s, ...);
+
 int				ft_printf(const char *s, ...);
+int				ft_format(char *s, long long *f, va_list ap, int *c);
+char			*ft_cast_int(char s, va_list ap, long long *f);
+char			*ft_cast_uns(char s, va_list ap, long long *f);
+char			*ft_cast_str(char s, va_list ap);
+int				ft_cast_wch(char s, va_list ap, long long *f, int *c);
+char			*ft_con_int(long long i, long long *f);
+char			*ft_con_uns(char s, unsigned long long i, long long *f);
+int				ft_con_ptr(va_list ap, long long f, int *c);
+char			*ft_itoabase_uns(unsigned long long n, int b, long long *f, char c);
+int				ft_color(char *s, int i, int *c);
+int				ft_charwlen(wchar_t c);
+int				ft_strwlen(wchar_t *s);
+void			ft_putwchar(wchar_t c);
+void			ft_putwstr(wchar_t *s);
 
 #endif

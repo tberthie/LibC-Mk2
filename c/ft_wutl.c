@@ -6,11 +6,11 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/29 17:52:19 by tberthie          #+#    #+#             */
-/*   Updated: 2017/05/20 13:54:16 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/12/08 01:01:33 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "libft.h"
 
 int		ft_charwlen(wchar_t c)
 {

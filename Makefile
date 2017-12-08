@@ -11,6 +11,7 @@ OC = $(addprefix c/ft_,$(addsuffix .o,\
 	parrnew parrfree parrelmfree parrpush parrprem parrrem parrlen parrdup parrndup parrjoin\
 	intlen\
 	print\
+	printf con format cast utl wchar wutl color \
 	))
 
 OA = $(addprefix asm/ft_,$(addsuffix .o,\
@@ -19,15 +20,12 @@ OA = $(addprefix asm/ft_,$(addsuffix .o,\
 	cat\
 	))
 
-PRF=$(addprefix printf/ft_,$(addsuffix .o,\
-	printf con format cast utl wchar wutl color))
-
 NAME=libft.a
 
 all: $(NAME)
 
-$(NAME): $(OC) $(OA) $(PRF)
-	ar rcs $(NAME) $(OC) $(OA) $(PRF)
+$(NAME): $(OC) $(OA)
+	ar rcs $(NAME) $(OC) $(OA)
 
 c/%.o: c/%.c
 	gcc -c $< -o $@ -Wall -Wextra -Werror -O3 -I.
@@ -35,13 +33,9 @@ c/%.o: c/%.c
 asm/%.o: asm/%.s
 	nasm $< -o $@ -f macho64 -I.
 
-printf/%.o: printf/%.c
-	gcc -c $< -o $@ -Wall -Wextra -Werror -O3 -I.
-
 clean:
 	rm -f $(OC)
 	rm -f $(OA)
-	rm -f $(PRF)
 
 fclean: clean
 	rm -f $(NAME)
