@@ -1,5 +1,5 @@
 OC = $(addprefix c/ft_,$(addsuffix .o,\
-	atoi atoip itoa itoabase utoabase abs\
+	atoi atoip itoa itoabase utoabase\
 	freeret freeswap ptrswap free\
 	gnl rfc gdc\
 	isdir\
@@ -17,6 +17,7 @@ OC = $(addprefix c/ft_,$(addsuffix .o,\
 OA = $(addprefix asm/ft_,$(addsuffix .o,\
 	bzero m memalloc memset memcpy memcmp \
 	strcat strlen strdup strcpy strcmp strchr puts\
+	abs\
 	cat\
 	))
 
