@@ -6,7 +6,7 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/20 19:51:42 by tberthie          #+#    #+#             */
-/*   Updated: 2017/12/08 01:31:05 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/12/14 16:52:33 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void			ft_memcpy(void *dest, const void *src, unsigned int byte_nb);
 void			*ft_m(unsigned int byte_nb);
 void			ft_ptrswap(void **p1, void **p2);
 void			ft_free(void *ptr);
-void			ft_memset(void *mem, unsigned int size, char c);
+void			*ft_memset(void *mem, unsigned int size, char c);
 
 char			*ft_gnl(int fd);
 char			*ft_rfc(char *file);

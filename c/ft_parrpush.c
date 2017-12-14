@@ -6,7 +6,7 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/20 19:49:27 by tberthie          #+#    #+#             */
-/*   Updated: 2017/12/08 00:44:45 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/12/12 17:56:32 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,13 @@
 
 void	ft_parrpush(void ***tab, void *elem)
 {
-	void			**n_tab;
-	unsigned int	arr_len;
+	void	**n_tab;
+	size_t	len;
 
-	arr_len = ft_parrlen(*tab);
-	n_tab = (void**)ft_m(sizeof(void*) * (arr_len + 2));
-	n_tab[arr_len] = elem;
-	n_tab[arr_len + 1] = (void*)0;
-	if (n_tab == *tab)
-		return ;
-	while (arr_len--)
-		n_tab[arr_len] = (*tab)[arr_len];
+	n_tab = ft_m(sizeof(void*) * (len = ft_parrlen(*tab) + 2));
+	n_tab[--len] = 0;
+	n_tab[--len] = elem;
+	ft_memcpy((void*)n_tab, (void*)*tab, sizeof(void*) * len);
 	free(*tab);
 	*tab = n_tab;
 }
