@@ -6,7 +6,7 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/20 19:51:42 by tberthie          #+#    #+#             */
-/*   Updated: 2017/12/14 16:52:33 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/12/14 17:51:10 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ unsigned int	ft_abs(int nb);
 unsigned char	ft_freeret(void *ptr, unsigned char ret);
 void			*ft_freeswap(void **ptr, void *swap);
 void			*ft_memalloc(unsigned int size);
-void			ft_memcpy(void *dest, const void *src, unsigned int byte_nb);
+void			*ft_memcpy(void *dest, const void *src, unsigned int byte_nb);
 void			*ft_m(unsigned int byte_nb);
 void			ft_ptrswap(void **p1, void **p2);
 void			ft_free(void *ptr);
