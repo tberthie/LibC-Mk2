@@ -5,8 +5,8 @@ _ft_memset:
 .main:
 	mov r8, rdi
 	push r8
-	mov rcx, rdx
-	mov rax, rsi
+	mov rcx, rsi
+	mov rax, rdx
 	cld
 	rep stosb
 	pop r8

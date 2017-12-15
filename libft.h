@@ -6,7 +6,7 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/20 19:51:42 by tberthie          #+#    #+#             */
-/*   Updated: 2017/12/14 17:51:10 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/12/15 17:59:06 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ void			*ft_m(unsigned int byte_nb);
 void			ft_ptrswap(void **p1, void **p2);
 void			ft_free(void *ptr);
 void			*ft_memset(void *mem, unsigned int size, char c);
+void			*ft_bzero(void *mem, unsigned int size);
+int				ft_memcmp(void *mem, void *mem2, unsigned int size);
 
 char			*ft_gnl(int fd);
 char			*ft_rfc(char *file);
@@ -51,13 +53,14 @@ void			ft_putnchar(char c, unsigned int nb);
 void			ft_putnbr(int nb);
 void			ft_puts(const char *str);
 
+char			*ft_strcat(char *s1, char *s2);
 char			*ft_strchr(char *str, char c);
 char			*ft_strrchr(char *str, char c);
 char			*ft_strstr(char *str, char *needle);
 char			ft_strcmp(const char *s1, const char *s2);
 char			ft_strncmp(const char *s1, const char *s2, unsigned int n);
 unsigned int	ft_stricmp(const char *s1, const char *s2);
-void			ft_strcpy(char *dest, const char *src);
+void			*ft_strcpy(char *dest, const char *src);
 char			*ft_strdup(const char *str);
 char			*ft_strndup(const char *str, int size);
 char			*ft_strjoin(const char *s1, const char *s2);
