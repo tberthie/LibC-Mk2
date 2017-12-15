@@ -7,8 +7,8 @@ _ft_memalloc:
 
 .main:
 	call _ft_m
-	mov rdx, rdi
+	mov rsi, rdi
 	mov rdi, rax
-	mov rsi, 0
+	mov rdx, 0
 	call _ft_memset
 	ret
